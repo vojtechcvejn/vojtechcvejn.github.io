@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vojtěch Cvejn - Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/c7bf4f11c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="javascript:void(0)" id="openNavbar" class="menu-icon"><i class="fa-solid fa-bars fa-xl"></i></a>
+        <script>
+            document.getElementById('openNavbar').addEventListener('click', function () {
+                document.body.classList.toggle('small-navbar-visible');
+                var navbar = document.getElementById('small-navbar');
+    
+                if (!navbar.classList.contains('fade-in')) {
+                    navbar.style.display = 'block';
+                    setTimeout(function () {
+                        navbar.classList.add('fade-in');
+                    }, 10);
+                } else {
+                    navbar.classList.remove('fade-in');
+                    setTimeout(function () {
+                        navbar.style.display = 'none';
+                    }, 500);
+                }
+            });
+        </script>
+    <ul>
+        <li><a href="./portfolio.html" class="nav-a-responsive">Portfolio</a></li>
+        <li><a href="./cenik.html" class="nav-a-responsive">Ceník</a></li>
+        <a href="./"><li class="logo"><img src="./data/img/watermark.png" alt="Logo"></li></a>
+        <li><a href="./sluzby.html" class="nav-a-responsive">Služby</a></li>
+        <li><a href="./kontakt.html" class="nav-a-responsive">Kontakt</a></li>
+    </ul>
+
+    <div class="small-navbar" id="small-navbar">
+        <ul>
+            <li><a href="./">DOMŮ</a></li>
+            <li><a id="activepage" href="./portfolio.html">PORTFOLIO</a></li>
+            <li><a href="./sluzby.html">SLUŽBY</a></li>
+            <li><a href="./cenik.html">CENÍK</a></li>
+            <li><a href="./kontakt.html">KONTAKT</a></li>
+            <br>
+            <a id ="closeNavbar" href="javascript:void(0)"><i class="fa-solid fa-xmark"></i></a>
+            <script>
+                document.getElementById('closeNavbar').addEventListener('click', function () {
+                    document.body.classList.toggle('small-navbar-visible');
+                    var navbar = document.getElementById('small-navbar');
+        
+                    if (!navbar.classList.contains('fade-in')) {
+                        navbar.style.display = 'block';
+                        setTimeout(function () {
+                            navbar.classList.add('fade-in');
+                        }, 10);
+                    } else {
+                        navbar.classList.remove('fade-in');
+                        setTimeout(function () {
+                            navbar.style.display = 'none';
+                        }, 500);
+                    }
+                });
+            </script>
+        </ul>
+    </div>
+</nav>
+
+    <div id="portfolio" class="portfolio">
+        <div id="cards" class="cards">
+
+            <div id="agriculture" class="agriculture">
+                <div id="card-content" class="card-content">
+                    <h1>Agriculture</h1>
+                    <a href="agriculture.html" class="gallery-view">Zobrazit Galerii</a>
+                </div>
+            </div>
+
+            <div id="automotive" class="automotive">
+                <div id="card-content" class="card-content">
+                    <h1>Automotive</h1>
+                    <a href="automotive.html" class="gallery-view">Zobrazit Galerii</a>
+                </div>
+            </div>
+
+            <div id="akce" class="akce">
+                <div id="card-content" class="card-content">
+                    <h1>Akce</h1>
+                    <a href="akce.html" class="gallery-view">Zobrazit Galerii</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="bottom-bar">
+        <div class="social-links">
+            <a href="https://www.instagram.com/vojtech.cvejn/" target="_blank"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
+            <a href="mailto:info@vojtechcvejn.cz"><i class="fa-solid fa-envelope" alt="Email"></i></a>
+            <a href="https://www.facebook.com/cvejnvojtech/" target="_blank"><i class="fa-brands fa-facebook" alt="Facebook"></i></a>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Vojtěch Cvejn. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+</body>
+</html>

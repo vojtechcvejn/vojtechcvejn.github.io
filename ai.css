@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  height: 2000px;
+  overflow-x: hidden;
+}
+
+#main {
+  background-image: url('./data/img/bg-main.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  height: 100vh;
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15));
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0px 5%;
+  height: 65px;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 6;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar li {
+  margin: 0 5%;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 750;
+  font-size: 1.125rem; /* Responzivní jednotky */
+  font-family: Inter;
+  padding: 5px 0px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: red;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  height: 110px;
+  width: auto;
+}
+
+@media (max-width: 675px) {
+  .navbar {
+    width: 100%;
+  }
+  .navbar ul {
+    flex-direction: column;
+  }
+  .navbar li {
+    margin: 10px 0;
+  }
+}
+
+#portfolio {
+  padding-top: 65px;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}
+
+.agriculture, .akce .card-content {
+  width: 100%;
+  height: 50vh;
+  color: white;
+  font-family: Inter;
+  font-weight: 650;
+  font-size: 1.563rem; /* Responzivní jednotky */
+  z-index: 10;
+  pointer-events: auto;
+  padding: 10% 0 0 10%;
+}
+
+.automotive .card-content {
+  width: 100%;
+  height: 50vh;
+  color: white;
+  font-family: Inter;
+  font-weight: 650;
+  font-size: 1.563rem; /* Responzivní jednotky */
+  z-index: 10;
+  pointer-events: auto;
+  padding: 10% 10% 0 0;
+  text-align: right;
+}
+
+.card-content h1 {
+  padding-bottom: 14px;
+  z-index: 50;
+}
+
+.card-content a {
+  position: relative;
+  z-index: 20;
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 7px 14px;
+  font-size: 1rem; /* Responzivní jednotky */
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.5s ease;
+}
+
+.card-content a:hover {
+  background: white;
+  color: black;
+}
+
+.agriculture, .automotive, .akce {
+  height: 46.6vh;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.agriculture {
+  background-image: url('./data/img/automotive.jpg');
+  background-position: center 55%;
+  top: 65px;
+}
+
+.automotive {
+  background-image: url('./data/img/automotive.jpg');
+  background-position: center 55%;
+}
+
+.akce {
+  background-image: url('./data/img/automotive.jpg');
+  background-position: center 55%;
+}
